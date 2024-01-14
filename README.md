@@ -3,11 +3,12 @@
 <aside>
 💡 I’m not the ‘actual’ author of these solutions, nor do I fully understand everything, I just collected available info by searching and asking around forums and a lot of help from ‘Dreamer’ on Discord.
 Feel free to comment, copy, alter etc. … Or reach out to me on e.g. Discord @jonwtr
-This is a live document - a copy lives on github - and might change over time.
+I've copied this from the Notion site I've shared before on Synthux [Link to Notion](https://jonwtr.notion.site/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee)
+**I've got to update the formatting and images and links from there - so for now best go to notion until this is fixed**
 
 </aside>
 
-This page contains a lot of text and info, there’s a [TLDR;](https://www.notion.so/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee?pvs=21) if you want to just *quickly* see how to get Plugdata and the MPR121 sensor up and running.
+This page contains a lot of text and info, , there’s a [TLDR;](https://www.notion.so/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee?pvs=21) if you want to just *quickly* see how to get Plugdata and the MPR121 sensor up and running.
 
 ## Synthux Synthmas 2023 Challenge
 
@@ -49,7 +50,7 @@ One of the elements I wanted to use was the MPR121, so this challenge was an exc
 
 The Plugdata patch I’ve build contains:
 
-![Simpletouch_delaydronefx_soundscpr_layout.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/183357c7-1e01-4c65-a869-200d788b649c/e8163d12-015e-4b7d-a6e9-fe1ca61336e9/Simpletouch_delaydronefx_soundscpr_layout.jpg)
+![Simpletouch_delaydronefx_soundscpr_layout.jpg](img\Simpletouch_delaydronefx_soundscpr_layout.jpg)
 
 - **Stereo audio input**
     - Left fader controls a dry signal that bypasses the delay
@@ -57,7 +58,7 @@ The Plugdata patch I’ve build contains:
         - LED = red means recording only for the audio input,
             - (keypads have a separate feedback knob 4)
         - Turning it of allows to still keep listening to the live input via the left fader.
-- S**tereo ping-pong delay**
+- **Stereo ping-pong delay**
     - **Knob 1: Time** up to 5000ms (left and right have a difference to create a moving stereo pinpong)
     - **Knob 2: Feedback** (up to almost infinite looping)
     - **Knob 3: Delay volume**
