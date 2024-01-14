@@ -1,10 +1,14 @@
 # Plugdata and daisy seed  + mpr121 touch sensor
 
+**I've got to update the formatting and images and links from there - so for now best go to notion until this is fixed**
+
+---
+
 <aside>
 💡 I’m not the ‘actual’ author of these solutions, nor do I fully understand everything, I just collected available info by searching and asking around forums and a lot of help from ‘Dreamer’ on Discord.
 Feel free to comment, copy, alter etc. … Or reach out to me on e.g. Discord @jonwtr
 I've copied this from the Notion site I've shared before on Synthux [Link to Notion](https://jonwtr.notion.site/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee)
-**I've got to update the formatting and images and links from there - so for now best go to notion until this is fixed**
+
 
 </aside>
 
