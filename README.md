@@ -2,6 +2,8 @@
 
 **I've got to update the formatting and images and links from there - so for now best go to notion until this is fixed**
 
+go to here for now: https://jonwtr.notion.site/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee
+
 ---
 
 <aside>
