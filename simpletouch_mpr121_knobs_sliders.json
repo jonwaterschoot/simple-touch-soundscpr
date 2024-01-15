@@ -62,8 +62,8 @@
        },
        "recled": {
            "component": "Led",
-           "pin": 23,
-       }	
+           "pin": 23
+       }
 
 
    }
