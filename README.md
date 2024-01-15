@@ -1,20 +1,19 @@
 # Plugdata and daisy seed  + mpr121 touch sensor
 
-**I've got to update the formatting and images and links from there - so for now best go to notion until this is fixed**
+**This is a copy from the Notion page I made, I've got to update the formatting and images and links from there - so for now best go to notion until this is fixed**
 
-go to here for now: https://jonwtr.notion.site/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee
+go here for now: https://jonwtr.notion.site/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee
 
 ---
 
 <aside>
 💡 I’m not the ‘actual’ author of these solutions, nor do I fully understand everything, I just collected available info by searching and asking around forums and a lot of help from ‘Dreamer’ on Discord.
 Feel free to comment, copy, alter etc. … Or reach out to me on e.g. Discord @jonwtr
-I've copied this from the Notion site I've shared before on Synthux [Link to Notion](https://jonwtr.notion.site/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee)
-
+This is a live document - a copy lives on github - and might change over time.
 
 </aside>
 
-This page contains a lot of text and info, , there’s a [TLDR;](https://www.notion.so/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee?pvs=21) if you want to just *quickly* see how to get Plugdata and the MPR121 sensor up and running.
+This page contains a lot of text and info, there’s a [TLDR;](https://www.notion.so/Plugdata-and-daisy-seed-mpr121-touch-sensor-41be6a24dc0b4dc4bdd2fffbe4763dee?pvs=21) if you want to just *quickly* see how to get Plugdata and the MPR121 sensor up and running.
 
 ## Synthux Synthmas 2023 Challenge
 
@@ -56,7 +55,7 @@ One of the elements I wanted to use was the MPR121, so this challenge was an exc
 
 The Plugdata patch I’ve build contains:
 
-![Simpletouch_delaydronefx_soundscpr_layout.jpg](img\Simpletouch_delaydronefx_soundscpr_layout.jpg)
+![Simpletouch_delaydronefx_soundscpr_layout.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/183357c7-1e01-4c65-a869-200d788b649c/e8163d12-015e-4b7d-a6e9-fe1ca61336e9/Simpletouch_delaydronefx_soundscpr_layout.jpg)
 
 - **Stereo audio input**
     - Left fader controls a dry signal that bypasses the delay
@@ -64,7 +63,7 @@ The Plugdata patch I’ve build contains:
         - LED = red means recording only for the audio input,
             - (keypads have a separate feedback knob 4)
         - Turning it of allows to still keep listening to the live input via the left fader.
-- **Stereo ping-pong delay**
+- S**tereo ping-pong delay**
     - **Knob 1: Time** up to 5000ms (left and right have a difference to create a moving stereo pinpong)
     - **Knob 2: Feedback** (up to almost infinite looping)
     - **Knob 3: Delay volume**
@@ -80,9 +79,13 @@ The Plugdata patch I’ve build contains:
         | --- | --- | --- | --- | --- | --- | --- | --- | --- |
         | Semitones | +0 | +1 | +3 | +5 | +6 | +8 | - 12 | - 24 |
 
-Download link to patch.
+Download link to patch:
 
-Download link to custom json
+[Soundscpr_alpha_plugdatampr121-demo.pd](https://prod-files-secure.s3.us-west-2.amazonaws.com/183357c7-1e01-4c65-a869-200d788b649c/ce28ea26-5e6e-4a6d-a15d-8c5a65d20a4d/Soundscpr_alpha_plugdatampr121-demo.pd)
+
+Download link to custom json:
+
+[simpletouch_mpr121_knobs_sliders.json](https://prod-files-secure.s3.us-west-2.amazonaws.com/183357c7-1e01-4c65-a869-200d788b649c/57da48a3-daf1-4570-b6c0-97a37a0643fb/simpletouch_mpr121_knobs_sliders.json)
 
 Read TLDR; for quick instructions
 
@@ -128,13 +131,16 @@ Getting plugdata and MPR121 up and running
 
 # Intro - about this page and my learning process
 
-### **These are my notes on getting the touch sensor mpr121 talking to Daisy seed through Plugdata**
+<aside>
+💡 **These are my notes on getting the touch sensor mpr121 talking to Daisy seed through Plugdata**
+
+</aside>
 
 I had some hurdles getting daisy to speak to custom knobs and the touch sensor.
 
 I’m a newcomer to Plugdata, coding and daisy - though I’ve been fumbling with Arduino for some years, I mostly just copy paste until it works. Fake it ‘till you make it! 🔍📋😅
 
-### SynthUX Academy - Simple Touch
+## SynthUX Academy - Simple Touch
 
 Specifically the code here is ready for Simple Touch Synth Kit, but can be adapted to fit your own custom setup going from Plugdata to Daisy. Specifically the documentation here is intended to help me remember the workflow in the future. 
 
@@ -164,7 +170,9 @@ Open each section to follow my findings and how I got the mpr121 to work in plug
 
 ---
 
-## If you don’t know Pure Data, Plugdata, Pd, flavours, modular, Visual programming. What are these? Read this
+## About visually / modular programming
+
+If you don’t know Pure Data, Plugdata, Pd, flavours, modular, Visual programming. What are these? Read this
 
 <aside>
 💡 If you now what Plugdata is and how it’s different from Pure Data > skip this part, I’ve written this with noobs like myself in mind.
@@ -215,7 +223,7 @@ Open each section to follow my findings and how I got the mpr121 to work in plug
 
 ### Let’s get started, full length explanations on getting MPR121 working;
 
-## **Install Plugdata**
+# **Install Plugdata**
 
 - download plugdata from [plugdata.org](https://plugdata.org/download.html) see the install instructions there as well
 - After installing the software you need to install the toolchain
@@ -224,7 +232,9 @@ Open each section to follow my findings and how I got the mpr121 to work in plug
 
 ---
 
-## **To get code from plugdata into daisy** we need to understand the workflow
+# **Workflow: from plugdata to Daisy**
+
+To **get code from plugdata into daisy** we need to understand the workflow
 
 <aside>
 💡 Not all existing patches work as is; they get converted; Many of the fancy visual stuff is useless for Daisy, many patches rely on stuff that isn’t supported, and Daisy also has limited CPU power compared to a computer.
@@ -241,7 +251,7 @@ Open each section to follow my findings and how I got the mpr121 to work in plug
 
 ---
 
-## **To compile we need a custom json file**
+# **To compile we need a custom json file**
 
 - To address knobs or buttons etc. connected to daisy pins we define a list in a custom json file;
 - This json file needs to be selected in the compile window under target board
@@ -253,7 +263,9 @@ Open each section to follow my findings and how I got the mpr121 to work in plug
 
 ---
 
-## To get a working mpr121 **edit a part of the toolchain json** components definition file / might get fixed
+# **Edit a part of the toolchain json** components definition file
+
+To get a working mpr121 **edit a part of the toolchain json** components definition file / might get fixed
 
 - This is not ‘normal’ and is supposed to work without the edit;
 - this bug has been reported: **[Bug: mpr121 pin setup incorrect](https://github.com/electro-smith/json2daisy/issues/18)**
@@ -295,9 +307,11 @@ Altered code:
 
 ---
 
-## json for the “custom” daisy board installed onto the simple Synthux touch board, this can be altered to fit other setups or the larger simple board
+# json for the “custom” daisy board
 
-This code works:
+This was made to fit the Daisy seed into a Simple Synthux touch board, this can be altered to fit other setups or the larger simple board
+
+This code is the basics:
 
 ```json
 {
@@ -316,11 +330,14 @@ This code works:
 }
 ```
 
-The code below wasn’t working at first because of the use of **Caps in the custom component name**. I was using `faderLeft` in the json file, which prompted this error when compiling in Plugdata: `Error c2daisy: Unknown parameter "faderLeft”`
+The full code below wasn’t working at first because of the use of **Caps in the custom component name**. I was using `faderLeft` in the json file, which prompted this error when compiling in Plugdata: `Error c2daisy: Unknown parameter "faderLeft”`
 
 Don’t use caps in the names. JUST DON’T 😆
 
-This is the custom json code for the Synthux Simple Touch with use of the knobs, faders, switches and the mpr121. 
+<aside>
+💡 This is the custom json code for the Synthux Simple Touch with use of the knobs, faders, switches and the mpr121:
+
+</aside>
 
 ```json
 {
@@ -396,11 +413,11 @@ This is the custom json code for the Synthux Simple Touch with use of the knobs,
 
 ---
 
-## pins **table overview** for Simple Touch
+# Pins **table overview** for Simple Touch
 
 I’m still often confused by the pin numbering used to program daisy. So I’ve made a table with an overview.
 
-I’ve created a spreadsheet with an overview:
+Link to the spreadsheet with a complete overview:
 
 https://docs.google.com/spreadsheets/d/1xtg_s1tk8tm-6qNkBLFc6V1L_Mpmu-PCOvv7qEyr9mU/edit?usp=sharing
 
@@ -432,7 +449,7 @@ Synthux is using the ‘S’ number as a way to refer to the connections on thei
 
 ---
 
-## Example patch 1 (minimal) in Plugdata
+# Example patch 1 (minimal) in Plugdata
 
 - Use this block in the patch `r mpr121_driver_ch0 @hv_param`
 - to refer to touch pads 0 - 11 change `_ch0` , `_ch…` up to `_ch11`
@@ -476,7 +493,7 @@ or download:
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/183357c7-1e01-4c65-a869-200d788b649c/3f914668-61cf-470b-967d-1c9aa20f918f/Untitled.png)
 
-### Smoothing and performance practices:
+## Smoothing and performance practices:
 
 And also, as I’ve learned from ‘dreamer’ on the Daisy discord, it’s good practice to avoid using graphical elements like sliders etc, because those are ignored when converted, while building a patch they can be helpful in testing code before uploading, but they add bulk to the code wich can make your files unnecessarily big. Rather make use of `trigger float bang symbol list anything pointer` or the shorthand `t f b s l a p` 
 
@@ -518,13 +535,15 @@ Here’s a patch with some fading, less harsh then the sudden on/off sounds of t
 
 ---
 
-## Example patch 2 (all options of Simple Touch)
+# Example patch 2 (all options of Simple Touch)
 
 Larger patch with examples of how to use all Simple Touch options: faders, knobs, switches and touchpads.
 
-I’m actively working on this patch and will submit it to [Synthux’s Synthmas challenge](https://www.synthux.academy/events/synthmas-2023) ( january 2024) so it gets added to the pool of examples. 
+I’m actively working on this patch and have submitted it to [Synthux’s Synthmas challenge](https://www.synthux.academy/events/synthmas-2023) ( january 2024) so it gets added to the pool of examples. 
 
-- [ ]  Todo: copy this documentation into a github repo, and post link here.
+- [x]  Todo: copy this documentation into a github repo, and post link here.
+- [ ]  Edit formatting on Github
+- [ ]  Reupload readme to Github
 
 The delay in this patch is a slightly altered version of the file petal_test.pd found the pd2dsy examples on Github:
 
@@ -537,7 +556,7 @@ The delay in this patch is a slightly altered version of the file petal_test.pd 
 - Knob 4 sends the touchpad sounds into the delay feedback loop. When you turn the feedback back down you can play the pads without those getting send into the delay.
 - Fader left controls the volume of the two switches
 - Fader right controls the volume of the two touchpads
-- Using the feeback knobs to max. will create an endless looper.
+- Using the feeback knobs to maximum will create an endless looper.
 - In this delay, changing the delay time will also be recorded into the feedback loop, effectively changing pitch.
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/183357c7-1e01-4c65-a869-200d788b649c/90e4d5ca-f1e3-4a63-acd2-cb51404f3f59/Untitled.png)
@@ -755,7 +774,7 @@ Open the toggle above this to reveal the code to copy past or download the file:
 
 ---
 
-## Extra info on MPR121 messages from pd2dsy
+# Extra info on MPR121 messages from pd2dsy
 
 | MPR121 | --- | Returns whether channel 0 is touched according to the threshold. |
 | --- | --- | --- |
@@ -766,7 +785,7 @@ info from: https://github.com/electro-smith/pd2dsy/tree/master
 
 ---
 
-## Extra info on using different memory options
+# Extra info on using different memory options
 
 The Daisy has a few options for uploading your compiled patch. 
 
@@ -791,6 +810,3 @@ I saved the file on my computer and in the compile window choose this file with 
 ---
 
 - Sources / resources
-    - question asked on [Discord: Daisy #puredata channel](https://discord.com/channels/1037767234803740694/1039305470499889162/1185959013389697144)
-    - Info found on daisy forum: https://forum.electro-smith.com/t/custom-json-with-mpr121-component-for-pd2dsy-how/3257/10
-    - Check the various links in the resources page on https://plugdata.org/documentation.html
