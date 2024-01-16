@@ -11,7 +11,7 @@
        }
    },
 
-   "components": {
+    "components": {
        "faderleft": {
            "component": "AnalogControl",
            "pin": 21
@@ -63,8 +63,12 @@
        "recled": {
            "component": "Led",
            "pin": 23
+       },
+       "ledondaisy": {
+            "component": "UserLed"
        }
 
-
-   }
+  }
 }
+
+
