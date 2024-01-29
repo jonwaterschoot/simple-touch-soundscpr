@@ -61,14 +61,18 @@
            "pin": 6
        },
        "recled": {
-           "component": "Led",
-           "pin": 23
+        "component": "Led",
+        "pin": 23
        },
-       "ledondaisy": {
-            "component": "UserLed"
-       }
+       "noiseled": {
+            "component": "Led",
+            "pin": 24
+    }
+       
+
 
   }
+
 }
 
 

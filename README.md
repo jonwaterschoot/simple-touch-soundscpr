@@ -58,23 +58,23 @@ The Plugdata patch I’ve build contains:
 ![Simpletouch_delaydronefx_soundscpr_layout.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/183357c7-1e01-4c65-a869-200d788b649c/e8163d12-015e-4b7d-a6e9-fe1ca61336e9/Simpletouch_delaydronefx_soundscpr_layout.jpg)
 
 - **Stereo audio input**
-    - Left fader controls a dry signal that bypasses the delay
+  - Left fader controls a dry signal that bypasses the delay
     - toggling the touch pads on top (the Tou-ch logo, pads 10 and 11) will send only the audio input to delay and trigger an LED
-        - LED = red means recording only for the audio input,
+      - LED = red means recording only for the audio input,
             - (keypads have a separate feedback knob 4)
         - Turning it of allows to still keep listening to the live input via the left fader.
 - S**tereo ping-pong delay**
-    - **Knob 1: Time** up to 5000ms (left and right have a difference to create a moving stereo pinpong)
+  - **Knob 1: Time** up to 5000ms (left and right have a difference to create a moving stereo pinpong)
     - **Knob 2: Feedback** (up to almost infinite looping)
     - **Knob 3: Delay volume**
 - **Touch keypad**
-    - **with an aeolean scale** mapped to **knob 5**
+  - **with an aeolean scale** mapped to **knob 5**
         - note this isn’t locked, the knob will simply go from 0 to 440hz.
             - via simple calculations sending the osc~ through frequency to midi, adding notes, then back to frequency (using mtof and ftom blocks)
     - **Pads 3 - 9** are basic osc~ with a quick attack and slower release
     - **Switch 1 and 2**: droning osc (with noise) to the pitch of knob 5
-        - Stop or add **noise** on top of the drones with **pads 0 and 2**
-        
+      - Stop or add **noise** on top of the drones with **pads 0 and 2**
+
         | Pad | 4 | 5 | 6 | 7 | 8 | 9 | switch 1 | switch 2 |
         | --- | --- | --- | --- | --- | --- | --- | --- | --- |
         | Semitones | +0 | +1 | +3 | +5 | +6 | +8 | - 12 | - 24 |
