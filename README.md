@@ -1,4 +1,11 @@
 # Plugdata and daisy seed  + mpr121 touch sensor
+---
+# UPDATE march 2025
+This page might still have useful info, but is outdated; e.g. support for the mpr121 touch sensor is working without needing any extra mods. Just including it in the json is fine. Please contact me if you need up to date info or links at the Discord servers Synthux or Daisy - jonwtr
+
+Mainly keeping this as an archive
+---
+---
 
 **This is a copy from the Notion page I made, I've got to update the formatting and images and links from there - so for now best go to notion until this is fixed**
 
